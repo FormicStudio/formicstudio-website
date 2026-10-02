@@ -6,36 +6,45 @@ const updateHeader = () => header?.classList.toggle('scrolled', window.scrollY >
 updateHeader();
 window.addEventListener('scroll', updateHeader, { passive: true });
 
-menuButton?.addEventListener('click', () => {
-  const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-  menuButton.setAttribute('aria-expanded', String(!isOpen));
-  menuButton.querySelector('.sr-only').textContent = isOpen ? 'メニューを開く' : 'メニューを閉じる';
-  nav?.classList.toggle('open', !isOpen);
-  document.body.style.overflow = isOpen ? '' : 'hidden';
-});
+const setMenuOpen = (isOpen) => {
+  if (!menuButton || !nav) return;
+  menuButton.setAttribute('aria-expanded', String(isOpen));
+  const label = menuButton.querySelector('.sr-only');
+  if (label) label.textContent = isOpen ? 'メニューを閉じる' : 'メニューを開く';
+  nav.classList.toggle('open', isOpen);
+};
 
-nav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
-  menuButton?.setAttribute('aria-expanded', 'false');
-  nav.classList.remove('open');
-  document.body.style.overflow = '';
-}));
+menuButton?.addEventListener('click', () => {
+  setMenuOpen(menuButton.getAttribute('aria-expanded') !== 'true');
+});
+nav?.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => setMenuOpen(false));
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && menuButton?.getAttribute('aria-expanded') === 'true') {
+    setMenuOpen(false);
+    menuButton.focus();
+  }
+});
+document.addEventListener('click', (event) => {
+  if (header && !header.contains(event.target)) setMenuOpen(false);
+});
+window.matchMedia('(min-width: 801px)').addEventListener('change', (event) => {
+  if (event.matches) setMenuOpen(false);
+});
 
 document.querySelectorAll('[data-year]').forEach((element) => {
   element.textContent = String(new Date().getFullYear());
 });
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const reveals = document.querySelectorAll('.reveal');
-if (reducedMotion || !('IntersectionObserver' in window)) {
-  reveals.forEach((element) => element.classList.add('visible'));
-} else {
+if (!reducedMotion && 'IntersectionObserver' in window) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
     });
-  }, { threshold: 0.14 });
-  reveals.forEach((element) => observer.observe(element));
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
 }

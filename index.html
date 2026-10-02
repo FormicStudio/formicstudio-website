@@ -3,177 +3,142 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Formic Studioは、日常の学びを手のひらに届けるiOSアプリを企画・開発する個人スタジオです。">
-  <meta name="theme-color" content="#10231f">
-  <title>Formic Studio — 小さくつくり、深く届ける。</title>
-  <link rel="icon" href="assets/app-icon.png">
-  <link rel="stylesheet" href="styles.css?v=1">
-  <script>document.documentElement.classList.add('js')</script>
-  <script src="main.js?v=1" defer></script>
+  <meta name="description" content="Formic Studioは、学びと仕事に役立つiOSアプリをつくる個人開発スタジオです。運転練習ミニゲーム、GENBA CALCの紹介・サポート・利用規約をご案内します。">
+  <meta name="theme-color" content="#07566a">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Formic Studio | 学びと仕事に、使えるアプリを。">
+  <meta property="og:description" content="運転の練習から、現場の計算まで。日々の「できる」を支えるiOSアプリをつくっています。">
+  <meta property="og:url" content="https://formicstudio.jp/">
+  <meta property="og:image" content="https://formicstudio.jp/assets/formic-studio-logo.png">
+  <title>Formic Studio | 学びと仕事に、使えるアプリを。</title>
+  <link rel="icon" type="image/png" href="assets/formic-studio-logo.png">
+  <link rel="stylesheet" href="styles.css?v=2">
+  <script src="main.js?v=2" defer></script>
 </head>
-<body>
+<body class="home">
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="site-header" data-header>
     <a class="brand" href="index.html" aria-label="Formic Studio ホーム">
-      <span class="brand-mark" aria-hidden="true">F</span>
-      <span>Formic Studio</span>
+      <img class="brand-logo" src="assets/formic-studio-logo.png" alt="" width="64" height="64">
+      <span>Formic Studio<small>アプリ開発スタジオ</small></span>
     </a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-button>
       <span class="sr-only">メニューを開く</span><span></span><span></span>
     </button>
     <nav id="site-nav" class="site-nav" aria-label="メインナビゲーション" data-nav>
-      <a href="#about">私たちについて</a>
-      <a href="#product">プロダクト</a>
-      <a href="#studio">事業情報</a>
-      <a class="nav-contact" href="mailto:drivingsim9@gmail.com">お問い合わせ</a>
+      <a href="#product">アプリ紹介</a>
+      <a href="#about">スタジオについて</a>
+      <a href="#app-documents">規約・ポリシー</a>
+      <a class="nav-contact" href="#contact">お問い合わせ <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero container" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span></span>Independent App Studio · Japan</p>
-        <h1 id="hero-title">小さくつくり、<br><em>深く届ける。</em></h1>
-        <p class="hero-lead">Formic Studioは、日常の「できた」を増やすiOSアプリを、企画から開発・運営まで一貫して手がける個人スタジオです。</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#product">プロダクトを見る <span aria-hidden="true">↘</span></a>
-          <a class="text-link" href="mailto:drivingsim9@gmail.com">仕事の相談をする <span aria-hidden="true">→</span></a>
-        </div>
+        <p class="eyebrow">INDEPENDENT APP STUDIO</p>
+        <h1 id="hero-title">学びと仕事に、<br><span>使えるアプリを。</span></h1>
+        <p class="hero-lead">運転の練習から、現場の計算まで。<br>日々の「できる」を支えるアプリを、<br class="desktop-break">ひとつずつ、丁寧につくっています。</p>
+        <a class="button button-primary" href="#product">アプリを見る <span aria-hidden="true">↓</span></a>
       </div>
-      <div class="hero-visual" aria-label="Formic Studioのプロダクトイメージ">
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-        <div class="phone-card">
-          <div class="phone-top"><span></span></div>
-          <img src="assets/app-icon.png" alt="運転練習ミニゲームのアプリアイコン" width="1024" height="1024">
-          <div class="phone-meta">
-            <p>NOW BUILDING</p>
-            <strong>運転練習<br>ミニゲーム</strong>
-          </div>
-        </div>
-        <p class="visual-note">01 / DRIVING PRACTICE</p>
-      </div>
-      <div class="hero-index" aria-hidden="true">FS—01</div>
+      <figure class="hero-art">
+        <span class="art-coordinate" aria-hidden="true">FORMIC / STUDIO</span>
+        <img src="assets/formic-studio-logo.png" alt="円の中に、触角を持つFのシンボルとFormicStudioの文字を配したロゴ" width="1254" height="1254" fetchpriority="high">
+        <figcaption>小さな工夫を、日々の力に。</figcaption>
+      </figure>
+      <div class="hero-bottom"><span>iOSアプリの企画・開発・運営</span><a href="#product">アプリ紹介へ <span aria-hidden="true">↓</span></a></div>
     </section>
 
-    <section id="about" class="statement section-pad">
-      <div class="section-label reveal"><span>01</span> Philosophy</div>
-      <div class="statement-body reveal">
-        <p>大きな仕組みより、<br>ひとつの確かな体験を。</p>
-        <div>
-          <p>操作してすぐ分かること。繰り返すほど身につくこと。使う人の時間を尊重すること。</p>
-          <p>Formic Studioは、小さなチームだからこそ細部まで目を配り、学びと遊びが自然につながるプロダクトを育てます。</p>
+    <section id="product" class="apps-section section-pad" aria-labelledby="apps-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">OUR APPS <span>01</span></p><h2 id="apps-title">毎日に役立つ、<br>2つのアプリ。</h2></div>
+          <p class="section-intro">それぞれの場面に必要な機能を、<br>手のひらに収まるかたちで。</p>
         </div>
-      </div>
-    </section>
-
-    <section id="product" class="product-section section-pad" aria-labelledby="product-title">
-      <div class="section-label light reveal"><span>02</span> Product</div>
-      <div class="product-grid">
-        <div class="product-intro reveal">
-          <p class="product-number">PRODUCT 01</p>
-          <h2 id="product-title">運転練習<br>ミニゲーム</h2>
-          <p>教習所の難所を、iPhone・iPadで何度でも。低速操作、判断、空間認識を落ち着いて練習するためのドライビングシミュレーターです。</p>
-          <div class="platform-row">
-            <span>iPhone</span><span>iPad</span><span>iOS 16+</span>
-          </div>
-        </div>
-        <div class="feature-list reveal" data-delay="1">
-          <article>
-            <span>01</span>
-            <div><h3>苦手なコースを反復</h3><p>S字、クランク、駐車、幅寄せ、狭路などを自分のペースで練習できます。</p></div>
+        <div class="apps-grid">
+          <article class="app-card reveal">
+            <div class="app-visual driving-visual">
+              <span class="visual-label">DRIVING PRACTICE</span>
+              <img src="assets/app-icon.png" alt="青い車を描いた運転練習ミニゲームのアプリアイコン" width="1024" height="1024" loading="lazy">
+              <span class="visual-index" aria-hidden="true">01</span>
+            </div>
+            <div class="app-card-body">
+              <p class="app-category">運転の学び / iOS</p>
+              <h3>運転練習ミニゲーム</h3>
+              <p class="app-tagline">苦手なコースを、自分のペースで。</p>
+              <p class="app-description">S字やクランク、駐車などのコースを繰り返し練習。運転に必要な判断や空間認識を、シミュレーターで確かめられます。</p>
+              <ul class="app-tags" aria-label="アプリの特長"><li>コース練習</li><li>低速操作</li><li>走行の振り返り</li></ul>
+              <p class="app-notice">実車での教習・練習を補助するアプリです。実際の運転練習や指導に代わるものではありません。</p>
+              <a class="card-link" href="apps/driving-sim/">アプリ情報・サポート <span aria-hidden="true">↗</span></a>
+            </div>
           </article>
-          <article>
-            <span>02</span>
-            <div><h3>低速操作を丁寧に再現</h3><p>独自の車両動力学コアで、前進・後退・クリープを含む低速走行を表現します。</p></div>
-          </article>
-          <article>
-            <span>03</span>
-            <div><h3>振り返って上達</h3><p>走行軌跡、予測ガイド、リプレイ、スコア評価で操作を客観的に確認できます。</p></div>
-          </article>
-        </div>
-      </div>
-      <div class="product-note reveal">
-        <span>大切なお知らせ</span>
-        <p>本アプリは運転感覚や判断の練習を補助するもので、実車での教習・練習を代替するものではありません。</p>
-      </div>
-      <div id="app-documents" class="app-documents">
-        <h3 class="reveal">アプリと関連情報</h3>
-        <div class="app-document-grid">
-          <article class="app-document-card reveal">
-            <p class="product-number">APP 01</p>
-            <h4>運転練習ミニゲーム</h4>
-            <p>運転の判断や空間認識を、自分のペースで練習できるシミュレーター。</p>
-            <nav aria-label="運転練習ミニゲームの関連情報">
-              <a href="apps/driving-sim/support/">サポート</a>
-              <a href="apps/driving-sim/terms/">利用規約</a>
-              <a href="apps/driving-sim/privacy/">プライバシーポリシー</a>
-              <a href="apps/driving-sim/commercial/">特定商取引法に基づく表記</a>
-            </nav>
-          </article>
-          <article class="app-document-card reveal" data-delay="1">
-            <p class="product-number">APP 02</p>
-            <h4>GENBA CALC（現場カルク）</h4>
-            <p>製造業の設計者・現場技術者向けの機械系計算アプリ。</p>
-            <nav aria-label="GENBA CALCの関連情報">
-              <a href="apps/genba-calc/terms/">利用規約</a>
-              <a href="apps/genba-calc/privacy/">プライバシーポリシー</a>
-              <a href="apps/genba-calc/commercial/">特定商取引法に基づく表記</a>
-            </nav>
+          <article class="app-card reveal">
+            <div class="app-visual calc-visual" aria-hidden="true">
+              <span class="visual-label">ENGINEERING CALCULATIONS</span>
+              <svg class="engineering-art" viewBox="0 0 420 270" fill="none">
+                <g stroke="currentColor" stroke-width="1.5">
+                  <path d="M73 165 210 92l137 73-137 74-137-74Z M73 165V99l137-74 137 74v66 M210 92V25 M210 239v-74 M73 99l137 66 137-66" />
+                  <path d="M48 95v73m-7-73h14m-14 73h14 M82 195l105 56m-108-61-6 12m113 43-6 12 M233 249l109-58m-112 52 7 12m102-70 7 12" opacity=".5"/>
+                  <circle cx="210" cy="132" r="22" stroke-dasharray="4 5"/>
+                  <path d="M186 132h48m-24-24v48" opacity=".6"/>
+                </g>
+                <g fill="currentColor" font-family="monospace" font-size="12"><text x="27" y="135">h</text><text x="121" y="246">w</text><text x="294" y="239">l</text></g>
+              </svg>
+              <strong class="calc-wordmark">GENBA<span>CALC</span></strong>
+              <span class="visual-index">02</span>
+            </div>
+            <div class="app-card-body">
+              <p class="app-category">現場の仕事 / iOS</p>
+              <h3>GENBA CALC <span class="app-subtitle">機械工学計算</span></h3>
+              <p class="app-tagline">設計と現場の計算を、もっと身近に。</p>
+              <p class="app-description">製造業の設計者や現場技術者に向けた機械系計算アプリ。日々の計算作業を、スマートフォンから手軽に進められます。</p>
+              <ul class="app-tags" aria-label="アプリの特長"><li>機械工学</li><li>計算履歴</li><li>端末内にデータ保存</li></ul>
+              <p class="app-notice">計算結果は設計・検討の補助としてご利用ください。実際の設計や安全性は、専門知識に基づく確認が必要です。</p>
+              <a class="card-link" href="apps/genba-calc/">アプリ情報・お問い合わせ <span aria-hidden="true">↗</span></a>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="approach section-pad" aria-labelledby="approach-title">
-      <div class="section-label reveal"><span>03</span> Approach</div>
-      <div class="approach-head reveal">
-        <h2 id="approach-title">つくることと、<br>育てること。</h2>
-        <p>リリースをゴールにせず、使う人の視点で改善を重ねます。</p>
-      </div>
-      <div class="approach-cards">
-        <article class="reveal"><strong>01</strong><h3>設計</h3><p>目的を絞り、迷わず使える体験へ整理します。</p></article>
-        <article class="reveal" data-delay="1"><strong>02</strong><h3>開発</h3><p>見た目と手触り、内部品質を同じ温度で磨きます。</p></article>
-        <article class="reveal" data-delay="2"><strong>03</strong><h3>運営</h3><p>声と検証結果をもとに、長く使える形へ更新します。</p></article>
-      </div>
-    </section>
-
-    <section id="studio" class="studio section-pad" aria-labelledby="studio-title">
-      <div class="section-label reveal"><span>04</span> Studio</div>
-      <div class="studio-grid">
-        <div class="reveal">
-          <p class="eyebrow"><span></span>About the studio</p>
-          <h2 id="studio-title">Formic Studio</h2>
-          <p class="studio-lead">一人の責任で、企画から運営まで。</p>
+    <section id="about" class="about-section section-pad" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="reveal"><p class="eyebrow">ABOUT US <span>02</span></p><h2 id="about-title">小さな工夫を、<br>使いやすいかたちに。</h2></div>
+        <div class="about-copy reveal">
+          <p>Formic Studioは、iOSアプリの企画・開発・運営を行う個人開発スタジオです。</p>
+          <p>学びの中でつまずくこと。仕事の中で繰り返すこと。そうした身近な場面から、アプリで役立てることを考えています。</p>
+          <p>目的に合った機能と、分かりやすい操作を大切に。使ってくださる方の声を聞きながら、改善を重ねていきます。</p>
+          <dl class="studio-data"><div><dt>屋号</dt><dd>Formic Studio</dd></div><div><dt>事業形態</dt><dd>個人事業</dd></div><div><dt>事業内容</dt><dd>iOSアプリの企画・開発・運営</dd></div></dl>
         </div>
-        <dl class="studio-data reveal" data-delay="1">
-          <div><dt>屋号</dt><dd>Formic Studio</dd></div>
-          <div><dt>事業形態</dt><dd>個人事業</dd></div>
-          <div><dt>事業内容</dt><dd>iOSアプリの企画・開発・運営</dd></div>
-          <div><dt>お問い合わせ</dt><dd><a href="mailto:drivingsim9@gmail.com">drivingsim9@gmail.com</a></dd></div>
-        </dl>
       </div>
     </section>
 
-    <section class="contact-band" aria-labelledby="contact-title">
-      <div class="reveal">
-        <p>CONTACT</p>
-        <h2 id="contact-title">一緒につくれることを、<br>聞かせてください。</h2>
+    <section id="app-documents" class="documents-section section-pad" aria-labelledby="documents-title">
+      <div class="container">
+        <div class="section-heading reveal"><div><p class="eyebrow">APP INFORMATION <span>03</span></p><h2 id="documents-title">安心して使うために。</h2></div><p class="section-intro">アプリごとの利用規約と、<br>情報の取り扱いをご案内します。</p></div>
+        <div class="document-directory reveal">
+          <div class="directory-row"><h3>運転練習ミニゲーム</h3><nav aria-label="運転練習ミニゲームの規約・ポリシー"><a href="apps/driving-sim/terms/">利用規約 <span aria-hidden="true">↗</span></a><a href="apps/driving-sim/privacy/">プライバシーポリシー <span aria-hidden="true">↗</span></a><a href="apps/driving-sim/commercial/">特定商取引法に基づく表記 <span aria-hidden="true">↗</span></a></nav></div>
+          <div class="directory-row"><h3>GENBA CALC</h3><nav aria-label="GENBA CALCの規約・ポリシー"><a href="apps/genba-calc/terms/">利用規約 <span aria-hidden="true">↗</span></a><a href="apps/genba-calc/privacy/">プライバシーポリシー <span aria-hidden="true">↗</span></a><a href="apps/genba-calc/commercial/">特定商取引法に基づく表記 <span aria-hidden="true">↗</span></a></nav></div>
+        </div>
       </div>
-      <a class="contact-circle" href="mailto:drivingsim9@gmail.com" aria-label="メールでお問い合わせ">
-        <span aria-hidden="true">↗</span><small>MAIL US</small>
-      </a>
+    </section>
+
+    <section id="contact" class="contact-section section-pad" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="reveal"><p class="eyebrow">CONTACT <span>04</span></p><h2 id="contact-title">ご質問・ご意見を<br>お聞かせください。</h2><p>アプリの使い方や不具合については、<br>各アプリの窓口へご連絡ください。</p></div>
+        <div class="contact-options reveal">
+          <a href="mailto:drivingsim9@gmail.com"><span><small>運転練習ミニゲーム</small><strong>drivingsim9@gmail.com</strong></span><span aria-hidden="true">↗</span></a>
+          <a href="mailto:genbacalc@gmail.com"><span><small>GENBA CALC</small><strong>genbacalc@gmail.com</strong></span><span aria-hidden="true">↗</span></a>
+          <p>不具合のご報告には、端末名・iOSのバージョン・発生時の操作を添えていただくと、確認がスムーズです。</p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-brand"><span class="brand-mark" aria-hidden="true">F</span><strong>Formic Studio</strong></div>
-    <nav aria-label="フッターナビゲーション">
-      <a href="apps/driving-sim/support/">運転アプリのサポート</a>
-      <a href="#app-documents">アプリ別の規約・ポリシー</a>
-      <a href="mailto:drivingsim9@gmail.com">お問い合わせ</a>
-    </nav>
+  <footer class="site-footer"><div class="container footer-inner">
+    <a class="brand footer-brand" href="index.html"><img class="brand-logo" src="assets/formic-studio-logo.png" alt="" width="64" height="64"><span>Formic Studio<small>学びと仕事に、使えるアプリを。</small></span></a>
+    <nav aria-label="フッターナビゲーション"><a href="#product">アプリ紹介</a><a href="#app-documents">規約・ポリシー</a><a href="#contact">お問い合わせ</a></nav>
     <p>© <span data-year>2026</span> Formic Studio</p>
-  </footer>
+  </div></footer>
 </body>
 </html>
